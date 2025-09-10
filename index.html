@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты и социальные сети</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Свяжитесь с нами</h1>
+        
+        <div class="buttons-container">
+            <a href="https://www.instagram.com/sassofono_boutique_/" class="social-btn" target="_blank">
+                <div class="btn-circle instagram">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+            </a>
+            
+            <a href="https://t.me/sassofono_boutique_dm" class="social-btn" target="_blank">
+                <div class="btn-circle telegram">
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <span>Telegram</span>
+            </a>
+            
+            <a href="https://maps.google.com/maps?q=41.281269,69.200463&ll=41.281269,69.200463&z=16" class="social-btn" target="_blank">
+                <div class="btn-circle location">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>Местоположение</span>
+            </a>
+        </div>
+        
+        <div class="phone-section">
+            <h2>Наши телефоны</h2>
+            <div class="phone-numbers">
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    <span>(90)962-45-49</span>
+                </div>
+                <div class="phone-number">
+                    <i class="fas fa-phone"></i>
+                    <span>(90)807-87-49</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.social-btn, .phone-section, h1');
+            elements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 200 + (index * 200));
+            });
+        });
+    </script>
+</body>
+</html>
